@@ -1,0 +1,40 @@
+This is a test message from with_underscore+z@mysite.net regarding your subscription.
+Please contact babe@gmail.com or CC to mmm@tiny.io for details.
+For support, write to duplicate.case@GMAIL.com.
+Alternatively, reach us at numeric123+tag@numbers.org.
+This is a test message from BABE+xyz@GMAIL.COM regarding your subscription.
+Please contact john.doe+work@example.com or CC to m@tiny.io for details.
+For support, write to duplicatecase@gmail.com.
+Alternatively, reach us at with-hyphen@mysite.net.
+This is a test message from short@ex.org regarding your subscription.
+Please contact t.est.email@edu.ua or CC to duplicate.case@GMAIL.com for details.
+For support, write to t.est.email@edu.ua.
+Alternatively, reach us at pluscases+promo@domain.com.
+This is a test message from single@local.co regarding your subscription.
+Please contact x.y.z+label@sub.domain.co.uk or CC to ab.c+label@domain.com for details.
+For support, write to stu.dent@university.edu.
+Alternatively, reach us at babe@gmail.com.
+This is a test message from john.doe@example.com regarding your subscription.
+Please contact with_underscore+z@mysite.net or CC to m@tiny.io for details.
+For support, write to aa.a@short.com.
+Alternatively, reach us at xyz@sub.domain.co.uk.
+This is a test message from aaa@short.com regarding your subscription.
+Please contact test.email+work@edu.ua or CC to babe@gmail.com for details.
+For support, write to one.two.three@multi.domain.org.
+Alternatively, reach us at single@local.co.
+This is a test message from BABE+xyz@GMAIL.COM regarding your subscription.
+Please contact t.est.email@edu.ua or CC to johndoe@example.com for details.
+For support, write to ba.be+promo@gmail.com.
+Alternatively, reach us at aa.a@short.com.
+This is a test message from BABE+xyz@GMAIL.COM regarding your subscription.
+Please contact mmm@tiny.io or CC to stu.dent@university.edu for details.
+For support, write to x.y.z+label@sub.domain.co.uk.
+Alternatively, reach us at john.doe+work@example.com.
+This is a test message from s.in+plus@local.co regarding your subscription.
+Please contact BABE+xyz@GMAIL.COM or CC to 123numeric@numbers.org for details.
+For support, write to ab.cd+label@sub.example.com.
+Alternatively, reach us at duplicate.case@GMAIL.com.
+This is a test message from dot.name@example.com regarding your subscription.
+Please contact aa.a@short.com or CC to b.abe@gmail.com for details.
+For support, write to ab.cd+label@sub.example.com.
+Alternatively, reach us at 123numeric@numbers.org.

@@ -1,0 +1,10 @@
+babe@gmail.com
+b.abe@gmail.com
+ba.be+promo@gmail.com
+BABE+xyz@GMAIL.COM
+duplicate.case@GMAIL.com
+duplicatecase@gmail.com
+john.doe@example.com
+john.doe+spam@example.com
+johndoe@example.com
+john.doe+archive@example.com

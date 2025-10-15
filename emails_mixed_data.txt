@@ -1,0 +1,45 @@
+Name: John Smith, Email: test.email+work@edu.ua, Phone: +380626508633
+Contact: john.doe@example.com, Department: IT
+UserID 7231 - one.two.three@multi.domain.org
+Name: John Smith, Email: numeric123+tag@numbers.org, Phone: +380982443911
+Contact: 123numeric@numbers.org, Department: IT
+UserID 8564 - m@tiny.io
+Name: John Smith, Email: m@tiny.io, Phone: +380779508899
+Contact: with-hyphen@mysite.net, Department: IT
+UserID 8288 - john.doe+work@example.com
+Name: John Smith, Email: john.doe@example.com, Phone: +380600827733
+Contact: babe@gmail.com, Department: IT
+UserID 9432 - dot.name@example.com
+Name: John Smith, Email: 123numeric@numbers.org, Phone: +380727229317
+Contact: BABE+xyz@GMAIL.COM, Department: IT
+UserID 5126 - ABc@Gmail.Com
+Name: John Smith, Email: onetwo+tag@multi.domain.org, Phone: +380637474242
+Contact: stu.dent@university.edu, Department: IT
+UserID 6086 - johndoe@example.com
+Name: John Smith, Email: numeric123+tag@numbers.org, Phone: +380711946377
+Contact: with-hyphen@mysite.net, Department: IT
+UserID 9334 - ba.be+promo@gmail.com
+Name: John Smith, Email: xyz@sub.domain.co.uk, Phone: +380830663670
+Contact: babe@gmail.com, Department: IT
+UserID 9338 - numeric123+tag@numbers.org
+Name: John Smith, Email: ab.c+label@domain.com, Phone: +380664089064
+Contact: 123numeric@numbers.org, Department: IT
+UserID 5506 - ba.be+promo@gmail.com
+Name: John Smith, Email: with_underscore+z@mysite.net, Phone: +380916003951
+Contact: mm@tiny.io, Department: IT
+UserID 8078 - duplicatecase@gmail.com
+Name: John Smith, Email: one.two.three@multi.domain.org, Phone: +380517916760
+Contact: ab.cd+label@sub.example.com, Department: IT
+UserID 3238 - mmm@tiny.io
+Name: John Smith, Email: mmm@tiny.io, Phone: +380665421895
+Contact: aaa@short.com, Department: IT
+UserID 4818 - single@local.co
+Name: John Smith, Email: aa.a@short.com, Phone: +380582799052
+Contact: john.doe+work@example.com, Department: IT
+UserID 6179 - s.h.o.r.t+tag@ex.org
+Name: John Smith, Email: short@ex.org, Phone: +380828611937
+Contact: dotname@example.com, Department: IT
+UserID 2327 - stu.dent@university.edu
+Name: John Smith, Email: duplicate.case@GMAIL.com, Phone: +380751781710
+Contact: dotname@example.com, Department: IT
+UserID 7488 - stu.dent@university.edu

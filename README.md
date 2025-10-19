@@ -1,9 +1,6 @@
-Добре 👍
-Ось повністю готовий README.md, в одному кодовому блоці, без жодного розриву, щоб ти просто скопіювала один раз і вставила на GitHub 👇
-
 # 📧 Email Pseudonymizer (Bash version)
 
-## 🧩 Project Description
+## Project Description
 This project processes **unstructured `.txt` files** and finds all email addresses using **grep** and **sed/awk**. It then **pseudonymizes** them according to the following rules:  
 - Removes dots (`.`) from the local part (before `@`).  
 - Removes everything after `+` (the descriptor).  
@@ -18,14 +15,14 @@ b.abe+promo@gmail.com → ba***be@gmail.com
 
 ---
 
-## ⚙️ Tools Used
+## Tools Used
 - **grep** — to extract all email addresses from the text.  
 - **sed** or **awk** — to clean and pseudonymize the emails.  
 - **bash** — to automate file input/output.
 
 ---
 
-## 🧠 Task Summary
+## Task Summary
 - The work is done **in pairs**.  
 - Each team chooses their **variant** according to interests and abilities.  
 - Test `.txt` files are **created manually or using AI tools**.  
@@ -36,7 +33,7 @@ b.abe+promo@gmail.com → ba***be@gmail.com
 
 ---
 
-## 🧪 Test Files
+## Test Files
 Several `.txt` files were generated for testing:
 - `emails_list_basic.txt` — a plain list of different email addresses.  
 - `emails_in_text.txt` — emails inside sentences.  
@@ -45,7 +42,7 @@ Several `.txt` files were generated for testing:
 
 ---
 
-## 🧰 Usage
+## Usage
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/email-pseudonymizer-bash.git
@@ -59,7 +56,7 @@ Several `.txt` files were generated for testing:
 
 ---
 
-## 🧾 Example
+## Example
 ### Input:
 ```
 Please contact us at ababagalamaga@gmail.com or b.abe+promo@gmail.com.
@@ -72,7 +69,7 @@ Please contact us at ab***ga@gmail.com or ba***be@gmail.com.
 
 ---
 
-## 🧑‍💻 Authors
+## Authors
 This work was completed **in pairs** as part of a laboratory assignment on text data processing.  
 
 Pair members:  
@@ -81,5 +78,5 @@ Pair members:
 
 ---
 
-## 📜 License
+## License
 This project is distributed under the [MIT License](LICENSE).

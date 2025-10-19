@@ -1,82 +1,141 @@
-# 📧 Email Pseudonymizer (Bash version)
+# Email Pseudonymizer (Bash)
 
-## Project Description
-This project processes **unstructured `.txt` files** and finds all email addresses using **grep** and **sed/awk**. It then **pseudonymizes** them according to the following rules:  
-- Removes dots (`.`) from the local part (before `@`).  
-- Removes everything after `+` (the descriptor).  
-- Lowercases the email address.  
-- Replaces the middle characters of the cleaned name with `***`.  
+## Опис проєкту
+Скрипт обробляє **неструктуровані `.txt` файли** та знаходить усі email-адреси за допомогою **grep**. Далі адреси **нормалізуються** й **псевдонімізуються** (маскуються) за правилами:
 
-Example:  
-```
-ababagalamaga@gmail.com → ab***ga@gmail.com  
-b.abe+promo@gmail.com → ba***be@gmail.com
-```
+1) **Нормалізація**
+- прибираємо крапки в локальній частині (до `@`);
+- усе після `+` відкидається;
+- знижуємо регістр (lowercase).
 
----
+2) **Псевдонімізація**
+- зберігаємо початок і кінець імені, середину замінюємо на `***`.
+- якщо довжина локальної частини ≥ 4 → залишаємо перші **2** і останні **2** символи:  
+  `ababagalamaga@gmail.com → ab***ga@gmail.com`, `john.doe@example.com → jo***oe@example.com`
+- якщо коротша → залишаємо **перший і останній** символ:  
+  `m@tiny.io → m***m@tiny.io`, `aaa@short.com → a***a@short.com`
 
-## Tools Used
-- **grep** — to extract all email addresses from the text.  
-- **sed** or **awk** — to clean and pseudonymize the emails.  
-- **bash** — to automate file input/output.
+> Маскування **незворотне** та спрямоване на мінімізацію витоку ПІІ у відкритих датасетах/логах.
 
 ---
 
-## Task Summary
-- The work is done **in pairs**.  
-- Each team chooses their **variant** according to interests and abilities.  
-- Test `.txt` files are **created manually or using AI tools**.  
-- Submit the project as a **GitHub/GitLab repository**.  
-- If the repository is private — **add the instructor as a collaborator**.  
-- Include a **LICENSE** file (see [choosealicense.com](https://choosealicense.com/)).  
-- Describe clearly in this README what was done, and if something is not fully completed, note that explicitly.
+## Що в репозиторії
+- `pseudonymize_inplace.sh` — основний bash-скрипт для **in-place** обробки файлів (створює резервну копію з розширенням `.bak`).
+- Тестові вхідні файли:
+  - `emails_list_basic.txt` — базовий список email-ів.
+  - `emails_in_text.txt` — адреси всередині звичайного тексту.
+  - `emails_mixed_data.txt` — email-и впереміш з ПІІ (імена, телефони).
+  - `emails_with_duplicates.txt` — дублікати та варіанти одних і тих самих адрес.
+- `LICENSE` — вибрана ліцензія (див. розділ “Ліцензія”).
 
 ---
 
-## Test Files
-Several `.txt` files were generated for testing:
-- `emails_list_basic.txt` — a plain list of different email addresses.  
-- `emails_in_text.txt` — emails inside sentences.  
-- `emails_mixed_data.txt` — emails mixed with other personal data (names, phone numbers, etc.).  
-- `emails_with_duplicates.txt` — repeated and variant email addresses to check normalization.
+## Використання
 
----
-
-## Usage
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/email-pseudonymizer-bash.git
-   cd email-pseudonymizer-bash
-   ```
-2. Run the script:
-   ```bash
-   bash pseudonymize_emails.sh input.txt output.txt
-   ```
-3. The pseudonymized text will be saved in `output.txt`.
-
----
-
-## Example
-### Input:
-```
-Please contact us at ababagalamaga@gmail.com or b.abe+promo@gmail.com.
+### 1) Обробити один файл in-place
+```bash
+bash pseudonymize_inplace.sh path/to/file.txt
+# Створить path/to/file.txt.bak і замінить email-и в оригінальному файлі
 ```
 
-### Output:
+### 2) Обробити всі `.txt` у каталозі рекурсивно
+```bash
+find . -type f -name "*.txt" -print0 | xargs -0 -I {} bash pseudonymize_inplace.sh "{}"
 ```
-Please contact us at ab***ga@gmail.com or ba***be@gmail.com.
+
+### 3) “Сухий” прогін (побачити, що знайдеться)
+```bash
+grep -Eoi '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' -n path/to/file.txt | sort -u
 ```
 
 ---
 
-## Authors
-This work was completed **in pairs** as part of a laboratory assignment on text data processing.  
+## Приклади (до/після)
 
-Pair members:  
-- Student 1 — Orel Kateryna
-- Student 2 — Pomalina Margarita
+### emails_in_text.txt
+**Було (фрагмент):**
+```
+with_underscore+z@mysite.net, babe@gmail.com, duplicate.case@GMAIL.com,
+numeric123+tag@numbers.org, x.y.z+label@sub.domain.co.uk
+```
+**Стало (фрагмент):**
+```
+wi***re@mysite.net, b***e@gmail.com, du***se@gmail.com,
+nu***23@numbers.org, x***z@sub.domain.co.uk
+```
+
+### emails_list_basic.txt
+**Було (фрагмент):**
+```
+babe@gmail.com
+b.abe@gmail.com
+BABE+xyz@GMAIL.COM
+john.doe+work@example.com
+m@tiny.io
+```
+**Стало (фрагмент):**
+```
+b***e@gmail.com
+b***e@gmail.com
+b***e@gmail.com
+jo***oe@example.com
+m***m@tiny.io
+```
+
+### emails_mixed_data.txt
+**Було (фрагмент):**
+```
+test.email+work@edu.ua, 123numeric@numbers.org, ABc@Gmail.Com, stu.dent@university.edu
+```
+**Стало (фрагмент):**
+```
+te***il@edu.ua, 12***ic@numbers.org, a***c@gmail.com, st***nt@university.edu
+```
+
+### emails_with_duplicates.txt
+**Було (приклади дублікатів):**
+```
+babe@gmail.com, duplicate.case@GMAIL.com, john.doe@example.com, john.doe+promo@example.com
+```
+**Стало (уніфіковані значення):**
+```
+b***e@gmail.com, du***se@gmail.com, jo***oe@example.com, jo***oe@example.com
+```
 
 ---
 
-## License
-This project is distributed under the [MIT License](LICENSE).
+## Як це працює (огляд)
+1. **Видобуток**: `grep -Eoi` шукає патерн email, незалежно від регістру.
+2. **Нормалізація** (у `sed/awk`):
+   - локальна частина: видаляємо `.` та усічення після `+`;
+   - уся адреса знижується до lowercase.
+3. **Маскування**: на локальній частині лишаємо краї (2+2 або 1+1) і ставимо `***` посередині.
+4. **Заміна в тексті**: вихідний файл оновлюється in-place; створюється резервна `.bak`.
+
+---
+
+## Обмеження та зауваги
+- Патерн email — RFC-спрощення: може пропускати екзотичні адреси або чіпляти рідкісні псевдо-рядки.
+- Скрипт не перевіряє MX/доставку; працює виключно з рядковими збігами.
+- Маскування завжди вставляє `***`, навіть якщо ім’я дуже коротке (див. правила вище).
+- **Статус виконання:** функціонал нормалізації + псевдонімізації завершений; **GUI/звіт/юніт-тести** — не реалізовані (зазначено тут, як і вимагалося).
+
+---
+
+## Команда
+Лабораторна робота у парі:
+- Орел Катерина
+- Помаліна Маргарита
+
+---
+
+## Ліцензія
+Проєкт розповсюджується за умовами файлу **LICENSE** у корені репозиторію (вибрано на основі [choosealicense.com](https://choosealicense.com/)).
+
+---
+
+### Швидкий чек-лист для рев’ю
+- [x] Є `LICENSE`
+- [x] README описує **фактичний** скрипт `pseudonymize_inplace.sh`
+- [x] Додані приклади **до/після** з реальних файлів
+- [x] Вказано, що частина функцій (GUI/тести) не реалізовані

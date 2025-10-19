@@ -1,0 +1,45 @@
+Name: John Smith, Email: te***il@edu.ua, Phone: +380626508633
+Contact: jo***oe@example.com, Department: IT
+UserID 7231 - on***ee@multi.domain.org
+Name: John Smith, Email: nu***23@numbers.org, Phone: +380982443911
+Contact: 12***ic@numbers.org, Department: IT
+UserID 8564 - m***m@tiny.io
+Name: John Smith, Email: m***m@tiny.io, Phone: +380779508899
+Contact: wi***en@mysite.net, Department: IT
+UserID 8288 - jo***oe@example.com
+Name: John Smith, Email: jo***oe@example.com, Phone: +380600827733
+Contact: b***e@gmail.com, Department: IT
+UserID 9432 - do***me@example.com
+Name: John Smith, Email: 12***ic@numbers.org, Phone: +380727229317
+Contact: b***e@gmail.com, Department: IT
+UserID 5126 - a***c@gmail.com
+Name: John Smith, Email: on***wo@multi.domain.org, Phone: +380637474242
+Contact: st***nt@university.edu, Department: IT
+UserID 6086 - jo***oe@example.com
+Name: John Smith, Email: nu***23@numbers.org, Phone: +380711946377
+Contact: wi***en@mysite.net, Department: IT
+UserID 9334 - b***e@gmail.com
+Name: John Smith, Email: x***z@sub.domain.co.uk, Phone: +380830663670
+Contact: b***e@gmail.com, Department: IT
+UserID 9338 - nu***23@numbers.org
+Name: John Smith, Email: a***c@domain.com, Phone: +380664089064
+Contact: 12***ic@numbers.org, Department: IT
+UserID 5506 - b***e@gmail.com
+Name: John Smith, Email: wi***re@mysite.net, Phone: +380916003951
+Contact: m***m@tiny.io, Department: IT
+UserID 8078 - du***se@gmail.com
+Name: John Smith, Email: on***ee@multi.domain.org, Phone: +380517916760
+Contact: a***d@sub.example.com, Department: IT
+UserID 3238 - m***m@tiny.io
+Name: John Smith, Email: m***m@tiny.io, Phone: +380665421895
+Contact: a***a@short.com, Department: IT
+UserID 4818 - si***le@local.co
+Name: John Smith, Email: a***a@short.com, Phone: +380582799052
+Contact: jo***oe@example.com, Department: IT
+UserID 6179 - sh***rt@ex.org
+Name: John Smith, Email: sh***rt@ex.org, Phone: +380828611937
+Contact: do***me@example.com, Department: IT
+UserID 2327 - st***nt@university.edu
+Name: John Smith, Email: du***se@gmail.com, Phone: +380751781710
+Contact: do***me@example.com, Department: IT
+UserID 7488 - st***nt@university.edu
